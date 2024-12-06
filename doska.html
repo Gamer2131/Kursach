@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monitoring Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="./base.css">
+    <link rel="stylesheet" href="response.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000000;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        .content {
+            padding: 20px;
+            background-color: rgb(0, 0, 0);
+            border: 1px solid #ff0000;
+            border-radius: 5px;
+        }
+        #chart-container {
+            width: 100%;
+            margin: auto;
+        }
+        #system-status {
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #ff0000;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="glavnai.html">
+              <img class="photo" src="./photo/logo.png" alt="ff">
+              <p>SystemOKO</p>
+            </a>
+        </div>
+        <div class="menu">
+          <ul>
+            <li><a href="glavnai.html" style="color: white;">Главная</a></li>
+            <li><a href="server.html" style="color: white;">Заказать сервера</a></li>
+            <li><a href="Uslygi.html" style="color: white;">Другие услуги</a></li>
+
+          </ul>
+        </div>
+        <div class="tel">
+            <h3>Админ</h3>
+        </div>
+      </header>
+    <div class="container">
+        <div class="content">
+            <h1>Monitoring Dashboard</h1>
+            <div id="chart-container">
+                <canvas id="monitoringChart"></canvas>
+            </div>
+            <div id="system-status">
+                <h2>System Status</h2>
+                <p>Uptime: <span id="uptime"></span></p>
+                <p>CPU Count: <span id="cpu-count"></span></p>
+                <p>Total Memory: <span id="memory-total"></span></p>
+                <p>Total Disk: <span id="disk-total"></span></p>
+            </div>
+        </div>
+    </div>
+    <script>
+        async function fetchData() {
+            const response = await fetch('http://localhost:5000/api/monitoring');
+            const data = await response.json();
+            return data;
+        }
+
+        async function fetchSystemStatus() {
+            const response = await fetch('http://localhost:5000/api/system-status');
+            const status = await response.json();
+            document.getElementById('uptime').textContent = status.uptime;
+            document.getElementById('cpu-count').textContent = status.cpu_count;
+            document.getElementById('memory-total').textContent = `${(status.memory_total / (1024 ** 3)).toFixed(2)} GB (${(status.memory_total / (1024 ** 2)).toFixed(2)} MB)`;
+            document.getElementById('disk-total').textContent = `${(status.disk_total / (1024 ** 3)).toFixed(2)} GB (${(status.disk_total / (1024 ** 2)).toFixed(2)} MB)`;
+        }
+
+        function createChart(data) {
+            const ctx = document.getElementById('monitoringChart').getContext('2d');
+            const chartData = {
+                labels: data.map(item => new Date(item.timestamp).toLocaleString()),
+                datasets: [
+                    {
+                        label: 'CPU Usage (%)',
+                        data: data.map(item => item.cpu_usage),
+                        borderColor: 'rgba(75, 192, 192, 1)',
+                        backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                        fill: true,
+                    },
+                    {
+                        label: 'Memory Usage (%)',
+                        data: data.map(item => item.memory_usage),
+                        borderColor: 'rgba(153, 102, 255, 1)',
+                        backgroundColor: 'rgba(153, 102, 255, 0.2)',
+                        fill: true,
+                    },
+                    {
+                        label: 'Disk Usage (%)',
+                        data: data.map(item => item.disk_usage),
+                        borderColor: 'rgba(255, 99, 132, 1)',
+                        backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                        fill: true,
+                    },
+                ],
+            };
+
+            const options = {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    },
+                    title: {
+                        display: true,
+                        text: 'Monitoring Data',
+                    },
+                },
+            };
+
+            new Chart(ctx, {
+                type: 'line',
+                data: chartData,
+                options: options,
+            });
+        }
+
+        async function updateChart() {
+            const data = await fetchData();
+            createChart(data);
+        }
+
+        async function updateSystemStatus() {
+            await fetchSystemStatus();
+        }
+
+        updateChart();
+        updateSystemStatus();
+        setInterval(updateChart, 6000);  // Обновляем данные каждую минуту
+        setInterval(updateSystemStatus, 6000);  // Обновляем статус системы каждую минуту
+    </script>
+</body>
+</html>

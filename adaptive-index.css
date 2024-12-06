@@ -1,0 +1,86 @@
+@media (max-width: 670px) {
+    .slideshow, .slideshow-item, .slideshow img, .maintext {
+        margin: 0;
+        padding: 0;
+    }
+    .slideshow {
+        width: 100%;
+        margin: 40px auto;
+    }
+    .tel {
+        display: none;
+    }
+    .maintext p {
+        margin: 0;
+        font-size: 20px;
+        text-align: center;
+        padding: 15px;
+        line-height: 1.5;
+        font-weight: 300;
+    }
+    .colums {
+        align-items: center;
+        align-self: center;
+        text-align: center;
+    }
+    .maintext h2 {
+        font-size: 20px;
+    }
+    .btn_wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        margin: 40px;
+    }
+    .btn_wrapper button {
+        width: 183px;
+        height: 50px;
+        background-color: rgba(47, 40, 40, 1);
+        border-radius: 65px;
+        color: white;
+    }
+}
+
+@media (min-width: 670px) {
+    .maintext {
+        width: 80%;
+        margin: 0 auto;
+    }
+    .logo {
+        margin: 0;
+    }
+    header {
+        gap: 50px;
+    }
+    .btn_wrapper {
+        display: none;
+    }
+}
+
+@media (max-width: 1215px) {
+    .menu ul li{
+        margin: 0 !important;
+    }
+}
+
+@media (max-width: 3000px) {
+    .maintext {
+        width: 30%;
+        margin: 0 auto;
+    }
+    .menu ul li{
+        margin: 0;
+        margin-right: 50px;
+    }
+    .menu ul li:first-child{
+        margin-left: 100px;
+    }
+}
+
+@media (max-width: 940px) {
+    .maintext {
+        width: 100%;
+        margin: 0 auto;
+    }
+}

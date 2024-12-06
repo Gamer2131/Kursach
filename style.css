@@ -1,0 +1,17 @@
+body {
+    font-family: Arial, sans-serif;
+}
+#chart-container {
+    width: 80%;
+    margin: auto;
+}
+#system-status {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+a {
+    color: white;
+}

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>SystemOKO</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='server.css'>
+    <link rel="stylesheet" href="response.css">
+    <script src="baten.js" defer></script>
+    <link rel="stylesheet" href="./adaptive-index.css">
+</head>
+<body>
+  
+     <!-- The Modal -->
+     <div id="id01" class="modal">
+      <span onclick="document.getElementById('id01').style.display='none'"
+      class="close" title="Close Modal">&times;</span>
+  
+      <!-- Modal Content -->
+      <form class="modal-content animate" action="./doska.html">
+          <div class="imgcontainer">
+          <img src="./photo/user1.png" alt="Avatar" class="avatar">
+          </div>
+  
+          <div class="container">
+          <label for="www"><b>Логин</b></label>
+          <input id="www" type="text" placeholder="Enter Username" name="uname" required>
+  
+          <label for="ggg"><b>Пароль</b></label>
+          <input id="ggg" type="password" placeholder="Enter Password" name="psw" required>
+  
+          <button type="submit">Вход</button>
+          <label>
+              <input type="checkbox" checked="checked" name="remember"> Remember me
+          </label>
+          </div>
+      </form>
+      </div>
+
+      <!-- The Modal -->
+  <div id="id02" class="modal">
+      <span onclick="document.getElementById('id02').style.display='none'"
+      class="close" title="Close Modal">&times;</span>
+  
+      <!-- Modal Content -->
+      <form class="modal-content animate" action="./doska.html">
+          <div class="imgcontainer">
+          <img src="./photo/user.png" alt="Avatar" class="avatar">
+          </div>
+  
+          <div class="container">
+          <label for="ooo"><b>Имя нового пользователя</b></label>
+          <input id="ooo" type="text" placeholder="Enter Username" name="uname" required>
+  
+          <label for="ppp"><b>Пароль</b></label>
+          <input id="ppp" type="password" placeholder="Enter Password" name="psw" required>
+
+          <label>
+            <input type="checkbox" checked="checked" name="remember"> <a href="https://www.rostovteatr.ru/agreement.pdf">Пользовательские соглашения</a>
+          </label>
+  
+          <button type="submit">Регистрация</button>
+          </div>
+      </form>
+      </div>
+
+  <header>
+    <div class="logo">
+      <a href="glavnai.html">
+        <img class="photo" src="./photo/logo.png" alt="ff">
+        <p>SystemOKO</p>
+      </a>
+    </div>
+    <div class="menu">
+      <ul>
+        <li><a href="glavnai.html" style="color: white;">Главная</a></li>
+        <li><a href="server.html" style="color: white;">Заказать сервера</a></li>
+        <li><a href="Uslygi.html" style="color: white;">Другие услуги</a></li>
+      </ul>
+    </div>
+    <div class="tel">
+      <button onclick="document.getElementById('id02').style.display='block'">Регистрация</button>>
+      <button onclick="document.getElementById('id01').style.display='block'">Вход</button>
+    </div>
+  </header>
+
+      <main>
+
+        <div class="btn_wrapper">
+          <button class="black-btn" onclick="document.getElementById('id02').style.display='block'">Регистрация</button>
+          <button class="black-btn" onclick="document.getElementById('id01').style.display='block'">Вход</button>
+      </div>
+
+            <section class="title-tarif">
+              <div class="container">
+                <div class="content">
+                  <h1>Выберите оптимальный сервер</h1>
+                  <p>SystemOKO придлагает оптимальные сервера для любых потребностей</p>
+                </div>
+              </div>
+            </section>
+            <div class="tarif">
+              <div class="container">
+                <div class="content">
+                  <div class="block-tarif">
+                    <div class="header-block-tarif">
+                      <span>Малый сервер</span>
+                    </div>
+                    <div class="main-block-tarif">
+                      <p><span>12600</span> руб/месяц</p>
+                      <p>3 сервера 30 пользователей в системе</p>
+                      <p>Начните прямо сейчас</p>
+                      <button class="tarif-btn"  onclick="sendMessage()">Подключиться</button>
+                      <div>
+                        <p>Включает:</p>
+                        <ul>
+                          <li>Мониторинг системы</li>
+                          <li>Техническое обслуживание</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="block-tarif">
+                    <div class="header-block-tarif">
+                      <span>Большой сервер</span>
+                    </div>
+                    <div class="main-block-tarif">
+                      <p><span>40000</span> руб/месяц</p>
+                      <p>10 серверов 100 пользователей в системе</p>
+                      <p>Начните прямо сейчас</p>
+                      <button class="tarif-btn"  onclick="sendMessage()">Подключиться</button>
+                      <div>
+                        <p>Включает</p>
+                        <ul>
+                          <li>Мониторинг системе</li>
+                          <li>Техническое обслуживание</li>
+                          <li>Онлайн консультация по настройке</li>
+                          <li>Отдельный специалист</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="block-tarif">
+                    <div class="header-block-tarif">
+                      <span>Средний сервер</span>
+                    </div>
+                    <div class="main-block-tarif">
+                      <p><span>20000</span> руб/месяц</p>
+                      <p>5 серверов 50 пользователей в системе</p>
+                      <p>Начните прямо сейчас</p>
+                      <button class="tarif-btn"  onclick="sendMessage()">Подключиться</button>
+                      <div>
+                        <p>Включает</p>
+                        <ul>
+                          <li>Мониторинг системе</li>
+                          <li>Техническое обслуживание</li>
+                          <li>Онлайн консультация по настройке</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </main>
+<footer>
+    <div class="colums">
+        <div class="column1">
+            <p><a href="glavnai.html">Главная</a></p>
+            <p><a href="">Заказать сервер</a></p>
+            <p><a href="">Други услуги</a></p> 
+            <p>Email: SystemOKO.yandex.ru</p>
+            <p>Номер телефона: 89114465448</p>
+            <p>Юридический адрес: г. Вологда ул. Первомайская д 43</p>
+        </div>
+        <div class="column2">
+            <p><a href="">Отзывы</a></p>
+            <p><a href="">Форум</a></p>
+            <p><a href="">FAQ</a></p>
+            
+        </div>
+        <div class="logo1">
+          <a href="glavnai.html">
+          <img class="photo" src="./photo/logo.png" alt="ff">
+          <p>SystemOKO</p>
+          </a>
+        </div>
+    </div>
+    <p style="text-align: center; color: white;">Copyright © 2024 SystemOKO Server все права защищены</p>
+</footer>
+</body>
+</html>

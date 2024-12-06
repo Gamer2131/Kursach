@@ -1,0 +1,616 @@
+a{
+  text-decoration: none;
+  color:inherit;
+}
+a:hover{
+  text-decoration:underline;
+}
+li+img{
+  height:30px;
+}
+button:hover{
+  cursor:pointer;
+}
+div.menu-btn > div > div {
+  width: 30px;
+  height: 3px;
+}
+div.menu-btn > div{
+  display:flex;
+  flex-direction: column;
+  gap:5px;
+}
+.menu-btn {
+  font-size: 70px;
+  cursor: pointer;
+  color:white;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 420px;
+  width: 100%;
+  height: 100%;
+}
+.sidebar {
+  position: fixed;
+  left: -470px;
+  top: 58px;
+  width: 400px;
+  height: 100%;
+  transition: left 0.3s ease;
+  color:white;
+  padding:0px 10px;
+}
+.sidebar>ul{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top:20px;
+  gap:10px;
+}
+.group-button-header-sidebar{
+  display:flex;
+  justify-content: space-between;
+  
+}
+.group-button-header-sidebar>button{
+  width: 180px;
+}
+.group-button-header>.btn-join-free,.group-button-header>.sign-in,
+.group-button-header-sidebar>.sign-in,.group-button-header-sidebar>.btn-join-free{
+  color:white;
+  border-radius: 5px;
+  padding:10px 35px;
+  font-weight: bold;
+  font-size:13px;
+}
+.group-button-header>.sign-in,.group-button-header-sidebar>.sign-in{
+  background-color: inherit;
+  border:1px solid gray;
+}
+.group-button-header>.sign-in:hover,.group-button-header-sidebar>.sign-in:hover{
+  border:1px solid rgb(188, 188, 188);
+}
+body,html{
+  height: 100%;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+li{
+  text-decoration: none;
+  list-style-type: none;
+}
+.container{
+  width:90%;
+  margin:0px auto;
+}
+.logo,.group-button-header{
+  display:flex;
+  align-items: center;
+  gap:10px;
+}
+.logo{
+  height:28px;
+}
+.logo>img{
+  height: 100%;
+}
+.group-button-header>.btn-join-free,.group-button-header>.sign-in{
+  color:white;
+  border-radius: 5px;
+  padding:10px 35px;
+  font-weight: bold;
+  font-size:13px;
+}
+.group-button-header>.sign-in{
+  background-color: inherit;
+  border:1px solid gray;
+}
+.group-button-header>.sign-in:hover{
+  border:1px solid rgb(188, 188, 188);
+}
+.btn-join-free{
+  color:white;
+  font-weight: bold;
+  font-size:16px;
+  border:none;
+  border-radius: 5px;
+  padding:13px 20px;
+}
+header >.container> .content{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom:10px;
+  gap:23vw;
+}
+.nav{
+  background-color: white;
+  padding:20px 0px;
+}
+.container>.content>ul{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap:32px;
+}
+.nav>.container>.content>ul>li>a{
+  font-weight: bold;
+  font-size:13px;
+}
+
+main{
+  margin:150px 0;
+}
+.title-tarif{
+  text-align: center;
+  margin-bottom: 100px;
+  color:white;
+}
+.tarif{
+  padding:45px 0px;
+}
+.tarif>.container>.content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap:30px;
+  flex-wrap: wrap;
+}
+.tarif>.container>.content>div:nth-child(odd){
+  margin-top:60px;
+}
+.block-tarif{
+  display:grid;
+  grid-template-rows: 0.5fr 1fr;
+  grid-auto-flow: column;
+  border-radius: 15px;
+  padding:20px;
+  background-color:#e26810;
+}
+.header-block-tarif{
+  display: flex;
+  align-items: center;
+  color:white;
+}
+.header-block-tarif>span{
+  font-size: 16px;
+  font-weight: bold;
+  color:white;
+  padding:10px 20px;
+  border-radius: 15px;
+  margin-left:15px;
+  margin-bottom:89px;
+  background-color:#2d2828;
+}
+.main-block-tarif{
+  display: flex;
+  flex-direction: column;
+  color:#1e0404;
+}
+.main-block-tarif>p:nth-child(-n+2){
+  font-weight: bold;
+}
+.main-block-tarif>p>span{
+  font-size: 40px;
+}
+.main-block-tarif>p:nth-child(3){
+  font-size: 16px;
+  font-weight: bold;
+}
+.main-block-tarif>div>p{
+  margin-bottom:15px;
+  font-weight: bold;
+}
+.main-block-tarif>div>ul>li{
+  margin-bottom:10px;
+}
+.main-block-tarif>button{
+  padding:10px 0px;
+  width:100%;
+  margin:40px 0px;
+  border-radius: 10px;
+  background-color: inherit;
+  font-weight: bold;
+  font-size: 16px;
+}
+.main-block-tarif>div>ul>li::before{
+  content: "✓";
+  margin-right: 5px;
+}
+
+
+.top-footer{
+  color:white;
+}
+.top-footer>.container>ul{
+  display:flex;
+  gap:15px;
+  /* border:1px solid black; */
+  flex-direction: column;
+}
+.top-footer>.container>ul>li:first-child{
+  font-weight: bold;
+}
+.top-footer>.container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap:5px;
+  padding:15px;
+}
+.bottom-footer{
+  padding:15px;
+}
+.bottom-footer>.container>ul{
+  display:flex;
+  align-items: center;
+  gap:15px;
+}
+/* @media(max-width:1180px){
+  header>.container>.content{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 10px;
+      gap:0;
+  }
+}
+
+@media (min-width:901px){
+  .menu-btn {
+      display: none;
+  }
+}
+@media(max-width:900px){
+  .logo{
+      gap: 25px;
+  }
+  header{
+      height:48px;
+  }
+  .nav{
+      display:none;
+  }
+  .group-button-header{
+      display: none;
+  }
+  .group-button-header-sidebar{
+      display:flex;
+      flex-direction: row;
+  }
+  .menu-btn {
+      display: block;
+  }
+  .sidebar{
+      display:flex;
+      flex-direction: column;
+  }
+  
+}
+
+@media(max-width:490px){
+  .group-button-header-sidebar{
+      width:50%;
+      gap:5px;
+  }
+  .sidebar>ul{
+      align-self: start;
+  }
+} */
+header {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    height: 70px;
+  }
+.tel{
+  margin-right:20px;
+}
+.tel > button{
+  height:50px;
+}
+.menu {
+    flex-grow: 1;
+  }
+  
+.menu ul {
+    display: flex;
+    flex-flow: row nowrap;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+.menu li {
+    margin-right: 120px;
+    
+  }
+  
+.menu li:last-child {
+    margin-right: 0;
+  }
+  
+.menu a {
+    padding: 8px 10px;
+    color: white;
+  }
+
+  .logo {
+    margin-right: 8%;
+
+  }
+  .logo1 {
+    margin-right: 8%;
+    align-self: flex-start;
+  }
+
+.logo a {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 430px;
+    
+    text-decoration: none;
+    color: white;
+}
+
+.menu ul {
+    display: flex;
+    flex-flow: row nowrap;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    line-height: 18px;
+    list-style: none;
+    color: white;
+  }
+  
+  .menu a,
+  .menu .active {
+    display: block;
+    padding: 8px 10px;
+    
+    color: white;
+  }
+  
+  .menu a {
+    color: #000;
+    text-decoration: none;
+  }
+
+header button {
+    height: 65px;
+    width: 183px;
+    border-radius: 65px;
+    color: white;
+    background-color: rgba(47, 40, 40, 1);
+    
+    border-color: rgba(47, 40, 40, 1);
+}
+
+
+header {
+    background-color: #000;
+}
+
+
+body {
+    margin: 0;
+    background-color: rgba(47, 40, 40, 1);
+}
+
+.maintext {
+    color: white;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+.maintext p {
+    font-size: 25px;
+}
+
+.maintext h1 {
+    font-size: 40px;
+}
+
+footer {
+    background-color: #000;
+}
+
+.columm1 {
+    flex-direction: column;
+    color: rgba(255, 86, 1, 1);
+    flex-flow: column;
+    
+}
+
+.colums {
+    display: flex;
+    margin-left: 29%;
+    
+}
+
+.colums a{
+    text-decoration: none;
+    color: rgba(255, 86, 1, 1);
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+}
+
+.colums p {
+    color: white;
+}
+
+.logo1 {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    
+    text-decoration: none;
+    color: white;
+    margin-right: 8%;
+    margin-left: 15%;
+}
+
+footer {
+    margin: 0;
+}
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #393535;
+  margin: 5px auto; /* 15% from the top and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  /* Position it in the top right corner outside of the modal */
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: red;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+/* Close button on hover */
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)}
+  to {-webkit-transform: scale(1)}
+}
+
+@keyframes animatezoom {
+  from {transform: scale(0)}
+  to {transform: scale(1)}
+}
+
+/* Bordered form */
+form {
+  border: 3px solid #f1f1f1;
+}
+
+/* Full-width inputs */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #d75739;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+.photo {width: 60px;
+        height: 60px;
+}
+/* Set a style for all buttons */
+button.tarif-btn {
+  background-color: #2c2828;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+/* Add a hover effect for buttons */
+button:hover {
+  opacity: 0.8;
+}
+
+/* Extra style for the cancel button (red) */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+/* Center the avatar image inside this container */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+}
+
+/* Avatar image */
+img.avatar {
+  width: 10%;
+  border-radius: 50%;
+  
+}
+
+/* Add padding to containers */
+.container {
+  padding: 16px;
+}
+
+/* The "Forgot password" text */
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+    display: block;
+    float: none;
+  }
+  .cancelbtn {
+    width: 100%;
+  }
+}
+
+label {
+  color: white;
+}
+
+.black-btn {
+  background-color: #2f2828 !important;
+  border: 2px black solid;
+  width: 183px;
+  height: 50px;
+}
